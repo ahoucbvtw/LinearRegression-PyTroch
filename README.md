@@ -115,9 +115,7 @@ a = Variable(torch.rand(1), requires_grad = True)
 b = Variable(torch.rand(1), requires_grad = True)
 ```
 
-Through **a.data.add_(-lr * a.grad.data)、b.data.add_(-lr * b.grad.data)** to update the a and b. After update, also use **.grad.data.zero_()** to clear the gradient. 
-
-*ps. lr = learning rate*
+Through **a.data.add_(-lr * a.grad.data)、b.data.add_(-lr * b.grad.data)** to update the a and b. After update, also use **.grad.data.zero_()** to clear the gradient. *ps. lr = learning rate*
 
 ```
 lr = 0.0001
@@ -147,6 +145,8 @@ Final, use the new a and b value to plot a Regression line for train data.
 ![alt text](https://raw.githubusercontent.com/ahoucbvtw/LinearRegression-PyTroch/main/Picture/Regression%20line%20for%20train%20data.png "Regression line for train data")
 
 ## Validation and Plot
+Also plot the test data and its regression line in picture.
+
 ```
 x_pred = x_test.data.numpy() # test data部分的X軸值
 y_pred = y_test.data.numpy() # test data部分的Y軸值
